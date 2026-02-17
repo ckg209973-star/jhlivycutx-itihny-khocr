@@ -5,132 +5,148 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Anshu Report</title>
 
+<!-- Facebook Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+
+fbq('init', '1639702417473839'); 
+fbq('track', 'PageView');
+</script>
+<noscript>
+<img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1639702417473839&ev=PageView&noscript=1"/>
+</noscript>
+<!-- End Facebook Pixel Code -->
+
 <style>
-body{
+*{
     margin:0;
     padding:0;
+    box-sizing:border-box;
     font-family: Arial, Helvetica, sans-serif;
-    background: linear-gradient(180deg,#ff2b7a,#c40055);
+}
+
+body{
+    height:100vh;
     display:flex;
     justify-content:center;
     align-items:center;
-    height:100vh;
+    background: linear-gradient(to bottom, #ff2f7a, #d4005c);
 }
 
-.card{
-    width:350px;
-    background: linear-gradient(180deg,#7a1246,#5c0d36);
+.container{
+    width:90%;
+    max-width:400px;
+    background: linear-gradient(to bottom, #8a0d4f, #5c0834);
+    padding:30px 20px;
     border-radius:25px;
-    padding:40px 20px;
     text-align:center;
-    box-shadow:0 15px 30px rgba(0,0,0,0.4);
+    color:white;
+    box-shadow:0 20px 40px rgba(0,0,0,0.4);
 }
 
-h1{
-    color:#00f7ff;
-    letter-spacing:3px;
-    margin:10px 0;
-    font-size:28px;
+.title{
+    font-size:32px;
+    letter-spacing:4px;
+    font-weight:bold;
+    color:#00e5ff;
+    margin-bottom:10px;
 }
 
 .subtitle{
+    font-size:18px;
     color:#ddd;
-    font-size:16px;
-    margin-bottom:20px;
+    margin-bottom:25px;
 }
 
-.count{
-    font-size:70px;
-    color:#ffc400;
+.timer{
+    font-size:80px;
     font-weight:bold;
-    margin:10px 0;
+    color:#ffc400;
+    margin-bottom:10px;
 }
 
 .seconds{
-    color:#fff;
-    font-size:18px;
-    margin-bottom:25px;
+    font-size:20px;
+    margin-bottom:30px;
+    color:#eee;
 }
 
 .join-btn{
     display:inline-block;
-    padding:15px 25px;
-    border-radius:30px;
-    background:linear-gradient(90deg,#00f7ff,#3aa0ff);
-    color:#000;
+    padding:15px 30px;
+    border-radius:50px;
+    background: linear-gradient(45deg,#00e5ff,#4facfe);
+    color:black;
     font-weight:bold;
+    font-size:18px;
     text-decoration:none;
-    font-size:16px;
     transition:0.3s;
 }
 
 .join-btn:hover{
-    box-shadow:0 0 20px #00f7ff;
     transform:scale(1.05);
+    box-shadow:0 0 20px #00e5ff;
 }
 
-.footer-text{
-    margin-top:20px;
-    color:#ddd;
-    font-size:14px;
+.bottom-text{
+    margin-top:25px;
+    color:#ccc;
+    font-size:16px;
 }
 
 .ads-box{
-    margin-top:20px;
-    padding:8px 12px;
-    background:#00000040;
-    border-radius:8px;
-    font-size:13px;
+    margin-top:25px;
+    background:#5a0933;
+    padding:12px;
+    border-radius:12px;
+    font-size:16px;
 }
 
 .ads-box a{
-    color:#00f7ff;
-    text-decoration:none;
+    color:#00e5ff;
     font-weight:bold;
-}
-
-.ads-box a:hover{
-    text-decoration:underline;
+    text-decoration:none;
 }
 </style>
 </head>
-
 <body>
 
-<div class="card">
-
-    <h1>ANSHU REPORT</h1>
+<div class="container">
+    <div class="title">ANSHU REPORT</div>
     <div class="subtitle">Official Telegram Channel</div>
 
-    <div class="count" id="countdown">44</div>
+    <div class="timer" id="countdown">43</div>
     <div class="seconds">Seconds Left</div>
 
     <a href="#" class="join-btn">JOIN TELEGRAM CHANNEL</a>
 
-    <div class="footer-text">
+    <div class="bottom-text">
         Stay connected with ANSHU REPORT
     </div>
 
     <div class="ads-box">
-        Ads By 
-        <a href="https://t.me/CAPTAIN4433" target="_blank">
-            @CAPTAIN4433
-        </a>
+        Ads By <a href="https://t.me/CAPTAIN4433">@CAPTAIN4433</a>
     </div>
-
 </div>
 
 <script>
-let timeLeft = 44;
-let countdownElement = document.getElementById("countdown");
+let timeLeft = 43;
+let countdown = document.getElementById("countdown");
 
 let timer = setInterval(function(){
-    timeLeft--;
-    countdownElement.textContent = timeLeft;
-
-    if(timeLeft <= 0){
+    if(timeLeft <= 1){
         clearInterval(timer);
     }
+    timeLeft--;
+    countdown.innerHTML = timeLeft;
 },1000);
 </script>
 
